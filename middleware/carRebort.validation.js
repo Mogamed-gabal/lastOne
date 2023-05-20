@@ -2,6 +2,7 @@ const Joi = require("joi");
 
 const schema=Joi.object({
     full_name:Joi.string().required().min(10).max(20),
+    userId:Joi.string().required(),
     email:Joi.string().email().required(),
     idNumber:Joi.string().required(),
     typeOfCar:Joi.string().required(),
@@ -9,6 +10,7 @@ const schema=Joi.object({
     model:Joi.string().required(),
     licenPlate:Joi.string().required(),
     dwescribtio:Joi.string().required().min(50).max(500),
+    color:Joi.string().required()
 })
 module.exports.carRebortValidations=async (req,res,next)=>{
     let msgArray=[]
