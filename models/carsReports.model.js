@@ -5,7 +5,6 @@ const schema=mongoose.Schema({
     email:String,
     full_name:String,
     idNumber:String,
-    typeOfCar:String,
     dwescribtio:String,
     brand:String,
     model:String,
