@@ -4,13 +4,9 @@ const schema=Joi.object({
     full_name:Joi.string().required().min(10).max(20),
     email:Joi.string().email().required(),
     userId:Joi.string().required(),
-    SerialNumber:Joi.string().required(),
-    brand:Joi.string().required(),
-    model:Joi.string().required(),
-    state:Joi.string().required(),
     dwescribtio:Joi.string().required().min(50).max(500),
 })
-module.exports.MobileRebortValidations=async (req,res,next)=>{
+module.exports.thingsRebortValidations=async (req,res,next)=>{
     let msgArray=[]
     let {error}=await schema.validate(req.body,{abortEarly:false})
     if(error)
