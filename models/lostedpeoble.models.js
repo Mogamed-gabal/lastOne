@@ -17,8 +17,9 @@ const schema=mongoose.Schema({
 })
 
 schema.post("init",function (doc){
-    doc.img="https://egyptpolicestaton.onrender.com/"+doc.img
+    doc.img="https://egyptpolicestations.onrender.com/"+doc.img
     console.log(doc)
+
 })
 module.exports=mongoose.model('lostedPeoble',schema)
 
