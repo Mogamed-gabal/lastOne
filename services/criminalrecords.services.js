@@ -15,9 +15,22 @@ module.exports.haveAset=catchErrore(async (req,res)=>{
 })
 module.exports.getAllSets=catchErrore(async(req,res)=>{
 
-    const users=criminalrecordsModels.find({})
+    const users=await criminalrecordsModels.find({})
     res.json({message:"data",users})
 })
+module.exports.getUserSet=catchErrore(async(req,res)=>{
+    const{email}=req.params
+    const users=await criminalrecordsModels.find({email})
+    if(users)
+    {
+        res.json({message:"data",users})
+    }else
+    {
+        res.json({message:"this user didn't make any action yet"})
+    }
+  
+})
+
 module.exports.removeSet=catchErrore(async(req,res)=>{
     const{_id}=req.body
     
