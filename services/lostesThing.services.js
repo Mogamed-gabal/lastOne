@@ -7,8 +7,8 @@ function catchErrore(service){
 }
 }
 module.exports.addReport=catchErrore(async (req,res)=>{
-    const{full_name,email,userId,idNumber,phone,dwescribtio,type,state}=req.body
-    const user=await Things.insertMany({full_name,email,userId,idNumber,phone,dwescribtio,type,state})
+    const{full_name,email,userId,idNumber,placeofresidence,phone,dwescribtio,type,state}=req.body
+    const user=await Things.insertMany({placeofresidence,full_name,email,userId,idNumber,phone,dwescribtio,type,state})
     res.json({message:"success",user})
 
 })

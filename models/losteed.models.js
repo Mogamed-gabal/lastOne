@@ -7,6 +7,7 @@ const schema=mongoose.Schema({
     idNumber:String,
     phone:String,
     dwescribtio:String,
+    placeofresidence:String,
     type:String,
     state:{
         type:String,
