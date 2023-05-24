@@ -30,6 +30,18 @@ module.exports.getUserSet=catchErrore(async(req,res)=>{
     }
   
 })
+module.exports.getUserCriminalRecord=catchErrore(async(req,res)=>{
+    const{email}=req.params
+    const userReport=await criminalrecordsModels.find({email})
+    if(userReport)
+    {
+        res.json({message:'success',userReport})
+    }else
+    {
+        res.json({message:`this user didn't make any reports`})
+    }
+
+}) 
 
 module.exports.removeSet=catchErrore(async(req,res)=>{
     const{_id}=req.body
