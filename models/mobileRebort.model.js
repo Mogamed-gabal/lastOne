@@ -9,6 +9,7 @@ const schema=mongoose.Schema({
     brand:String,
     model:String,
     dateof:String,
+    rebortNum:String,
     state:{
         type:String,
         default:'pending'

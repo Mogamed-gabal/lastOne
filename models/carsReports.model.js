@@ -10,6 +10,7 @@ const schema=mongoose.Schema({
     licenPlate:String,
     dateof:String,
     color:String,
+    rebortNum:String,
     state:{
         type:String,
         default:'pending'

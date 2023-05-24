@@ -10,6 +10,7 @@ const schema=mongoose.Schema({
     placeofresidence:String,
     dateof:String,
     type:String,
+    rebortNum:String,
     state:{
         type:String,
         default:'pending'

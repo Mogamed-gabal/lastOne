@@ -7,6 +7,7 @@ const schema=Joi.object({
     idNumber:Joi.string().required(),
     dateof:Joi.string().required(),
     brand:Joi.string().required(),
+    rebortNum:Joi.string().required(),
     model:Joi.string().required(),
     licenPlate:Joi.string().required(),
     dwescribtio:Joi.string().required().min(50).max(500),
