@@ -9,6 +9,7 @@ const schema=mongoose.Schema({
     brand:String,
     model:String,
     licenPlate:String,
+    dateof:String,
     color:String,
     state:{
         type:String,

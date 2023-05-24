@@ -7,8 +7,8 @@ function catchErrore(service){
 }
 }
 module.exports.addReport=catchErrore(async (req,res)=>{
-    const{full_name,email,userId,SerialNumber,dwescribtio,brand,model,state}=req.body
-    const user=await Mobile.insertMany({full_name,email,userId,SerialNumber,dwescribtio,brand,model,state})
+    const{dateof,full_name,email,userId,SerialNumber,dwescribtio,brand,model,state}=req.body
+    const user=await Mobile.insertMany({dateof,full_name,email,userId,SerialNumber,dwescribtio,brand,model,state})
     res.json({message:"success",user})
 
 })

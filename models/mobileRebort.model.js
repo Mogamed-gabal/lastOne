@@ -8,6 +8,7 @@ const schema=mongoose.Schema({
     dwescribtio:String,
     brand:String,
     model:String,
+    dateof:String,
     state:{
         type:String,
         default:'pending'
