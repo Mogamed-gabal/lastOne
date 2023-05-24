@@ -8,7 +8,6 @@ const schema=mongoose.Schema({
     phone:String,
     dwescribtio:String,
     placeofresidence:String,
-    dateof:String,
     type:String,
     state:{
         type:String,
