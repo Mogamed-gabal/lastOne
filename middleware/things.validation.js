@@ -3,7 +3,6 @@ const Joi = require("joi");
 const schema=Joi.object({
     full_name:Joi.string().required().min(10).max(20),
     email:Joi.string().email().required(),
-    userId:Joi.string().required(),
     idNumber:Joi.string().required(),
     phone:Joi.string().required(),
     state:Joi.string(),
